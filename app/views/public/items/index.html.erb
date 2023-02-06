@@ -1,8 +1,10 @@
+<div class="container">
+
 <section class="wrapper flex">
 	<div class="sidebar">
 		<h3>ジャンル一覧</h3>
 		<% @genres.each do |genre| %>
-			<%= link_to genre.name, items_path(genre_id: genre.id) %>
+			<%= link_to genre.name, items_path(genre_id: genre.id), class:'btn btn-warning' %>
 		<% end %>
 	</div>
 	<div class="content">
@@ -15,7 +17,7 @@
 			<div class="items">
 				<% @items.each do |item| %>
 					<%= link_to item_path(item) do %>
-						<%= image_tag item.get_image, format: "jpeg", fallback: "no-image.png" %>
+						<%= image_tag item.get_image, format: "jpeg", fallback: "no-image.png", size: "200x200" %>
 						<h5><%= item.genre.name %></h5>
 						<p><%= item.name %></p>
 						<p>
@@ -35,3 +37,5 @@
 		<% end %>
 	</div>
 </section>
+
+</div>

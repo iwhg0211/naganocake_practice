@@ -1,11 +1,13 @@
 class Customer < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+         
   has_many :addresses, dependent: :destroy
   has_many :cart_items, dependent: :destroy
   has_many :orders
 
-  scope :only_active, -> { where(is_active: true) }
+  # scope :only_active, -> { where(is_active: true) }
+  # ↑このメソッドの説明を入れておく
 
   validates :last_name, presence: true
   validates :first_name, presence: true

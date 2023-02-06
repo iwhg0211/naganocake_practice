@@ -54,7 +54,7 @@
               <button type="button" class="btn btn-warning">カート</button><% end %>
             </li>
             <li>
-              <%= link_to destroy_customer__session_path, method: :delete, class:'navbar_brand' do %>
+              <%= link_to destroy_customer_session_path, method: :delete, class:'navbar_brand' do %>
               <button type="button" class="btn btn-warning">ログアウト</button><% end %>
             </li>
           <% else %>
@@ -89,6 +89,10 @@
       <%= yield %>
     </main>
 
-    <footer>Copyright © Infratop Inc. All Rights Reserved.</footer>
+    <footer>
+      <div class="col align-self-center">
+      Copyright © Infratop Inc. All Rights Reserved.
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,3 +1,5 @@
+<div class="container">
+
 <section class="inner">
 	<h2 class="section-ttl">ショッピングカート</h2>
 	<% if @cart_items.first %>
@@ -19,7 +21,7 @@
 					<% item = cart_item.item %>
 					<tr>
 						<td>
-							<%= image_tag item.get_image, class: "cart_item_image" %>
+							<%= image_tag item.get_image, class: "cart_item_image", size: "200x200" %>
 						</td>
 						<td><%= link_to item.name, item_path(item) %></td>
 						<td class="text-right"><%= item.with_tax_price %>円</td>
@@ -55,3 +57,5 @@
 		</div>
 	<% end %>
 </section>
+
+</div>

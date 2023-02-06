@@ -59,3 +59,4 @@ gem 'kaminari', '~> 1.2.1'
 gem 'jquery-rails'
 gem 'rails-i18n'
 gem 'enum_help'
+gem 'jp_prefecture' # 都道府県コードから都道府県名を変換するgem

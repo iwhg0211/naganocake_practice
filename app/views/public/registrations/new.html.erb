@@ -12,25 +12,26 @@
       <tbody>
         <tr>
           <td>名前</td>
-          <td><%= f.label :first_name, "(姓)", class: "customer_name" %> <%= f.text_field :first_name, autofocus: true, :placeholder =>"難波" %></td>
+          <%#:placeholderで未入力の際に、任意の文字を表示%>
+          <td><%= f.label :first_name, "(姓)", class: "customer_name" %> <%= f.text_field :first_name, autofocus: true, :placeholder =>"山田" %></td>
           <td><%= f.label :last_name, "(名)", class: "customer_name" %> <%= f.text_field :last_name, :placeholder =>"太郎" %></td>
         </tr>
         <tr>
           <td>フリガナ</td>
-          <td><%= f.label :first_name_kana, "(セイ)" %> <%= f.text_field :first_name_kana, :placeholder =>"ナンバ" %></td>
+          <td><%= f.label :first_name_kana, "(セイ)" %> <%= f.text_field :first_name_kana, :placeholder =>"ヤマダ" %></td>
           <td><%= f.label :last_name_kana, "(メイ)" %> <%= f.text_field :last_name_kana, :placeholder =>"タロウ" %></td>
         </tr>
         <tr>
           <td><%= f.label :email, "メールアドレス" %></td>
-          <td colspan="2"><%= f.email_field :email, autocomplete: "email" %></td>
+          <td colspan="2"><%= f.email_field :email, autocomplete: "email", :placeholder =>"nagano@cake" %></td>
         </tr>
         <tr>
           <td><%= f.label :postal_code, "郵便番号(ハイフンなし7桁)" %></td>
-          <td colspan="2"><%= f.text_field :postal_code, :placeholder =>"5420076", class: "jpostal_code" %></td>
+          <td colspan="2"><%= f.text_field :postal_code, :placeholder =>"1111111" %></td>
         </tr>
         <tr>
-          <td><%= f.label :address, "住所(郵便番号から自動入力)" %></td>
-          <td colspan="2"><%= f.text_field :address, class: "jpostal_address" %></td>
+          <td><%= f.label :address, "住所" %></td>
+          <td colspan="2"><%= f.text_field :address, :placeholder =>'〇県〇市〇区〇通〇丁目〇号室' %></td>
         </tr>
         <tr>
           <td><%= f.label :telephone_number, "電話番号(ハイフンなし10or11桁)" %></td>
